@@ -33,12 +33,12 @@ add_definitions(${PCL_DEFINITIONS})
 #### Required files ####
 
 set(ITERATIVE_GICP iterative_gicp.hpp)
-set(GENERIC_POINT_CLOUD_IO generic_point_cloud_io.h generic_point_cloud_io.cpp)
+
 
 #### Projects Settings ####
 
-add_executable(iterative_gicp_for_two_files main_two_files.cpp ${ITERATIVE_GICP} ${GENERIC_POINT_CLOUD_IO})
+add_executable(iterative_gicp_for_two_files main_two_files.cpp ${ITERATIVE_GICP})
 target_link_libraries(iterative_gicp_for_two_files ${PCL_LIBRARIES})
 
-add_executable(iterative_gicp_for_folder main_folder.cpp ${ITERATIVE_GICP} ${GENERIC_POINT_CLOUD_IO})
+add_executable(iterative_gicp_for_folder main_folder.cpp ${ITERATIVE_GICP})
 target_link_libraries(iterative_gicp_for_folder ${PCL_LIBRARIES})
